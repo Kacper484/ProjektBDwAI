@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Order>
+
+<h1>Lista Zamówień</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Produkt</th>
+            <th>Ilość</th>
+            <th>Data Zamówienia</th>
+            @if (User.IsInRole("Admin"))
+            {
+                <th>Akcje</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Product.Name</td>
+                <td>@order.Quantity</td>
+                <td>@order.OrderDate</td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@order.Id">Usuń</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create">Złóż Zamówienie</a>

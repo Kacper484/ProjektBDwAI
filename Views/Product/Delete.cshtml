@@ -1,0 +1,11 @@
+﻿@model Product
+
+<h1>Usuń Produkt</h1>
+
+<p>Czy na pewno chcesz usunąć produkt <strong>@Model.Name</strong>?</p>
+
+<form asp-action="Delete" method="post">
+    <input asp-for="Id" type="hidden" />
+    <button type="submit">Usuń</button>
+    <a asp-action="Index">Anuluj</a>
+</form>

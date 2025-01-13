@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Product>
+
+<h1>Lista Produktów</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nazwa</th>
+            <th>Cena</th>
+            <th>Ilość</th>
+            @if (User.IsInRole("Admin"))
+            {
+                <th>Akcje</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>@product.Quantity</td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@product.Id">Edytuj</a> |
+                        <a asp-action="Delete" asp-route-id="@product.Id">Usuń</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (User.IsInRole("Admin"))
+{
+    <a asp-action="Create">Dodaj Produkt</a>
+}
