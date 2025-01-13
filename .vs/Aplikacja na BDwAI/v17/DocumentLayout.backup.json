@@ -1,12 +1,122 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\controllers\\wrehousecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:controllers\\wrehousecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\controllers\\productapicontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:controllers\\productapicontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\controllers\\ordercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:controllers\\ordercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\controllers\\productcontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:controllers\\productcontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WrehouseControler.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\WrehouseControler.cs",
+              "RelativeDocumentMoniker": "Controllers\\WrehouseControler.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\WrehouseControler.cs",
+              "RelativeToolTip": "Controllers\\WrehouseControler.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T22:35:45.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductApiControler.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\ProductApiControler.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductApiControler.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\ProductApiControler.cs",
+              "RelativeToolTip": "Controllers\\ProductApiControler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T22:35:05.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderControler.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\OrderControler.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderControler.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\OrderControler.cs",
+              "RelativeToolTip": "Controllers\\OrderControler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T22:35:05.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T22:35:02.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductControler.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\ProductControler.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductControler.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\ProductControler.cs",
+              "RelativeToolTip": "Controllers\\ProductControler.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T22:33:38.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T22:29:08.145Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

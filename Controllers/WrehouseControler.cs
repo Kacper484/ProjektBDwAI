@@ -17,7 +17,7 @@ namespace ProjektBDwAI.Controllers
 
         public IActionResult Index()
         {
-            return View(_context.Warehouses.ToList()); // Lista magazynów
+            return View(_context.Warehouse.ToList()); // Lista magazynów
         }
 
         public IActionResult Create()
@@ -30,7 +30,7 @@ namespace ProjektBDwAI.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Warehouses.Add(warehouse);
+                _context.Warehouse.Add(warehouse);
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
@@ -39,7 +39,7 @@ namespace ProjektBDwAI.Controllers
 
         public IActionResult Delete(int id)
         {
-            var warehouse = _context.Warehouses.Find(id);
+            var warehouse = _context.Warehouse.Find(id);
             if (warehouse == null)
                 return NotFound();
 
@@ -49,11 +49,11 @@ namespace ProjektBDwAI.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
-            var warehouse = _context.Warehouses.Find(id);
+            var warehouse = _context.Warehouse.Find(id);
             if (warehouse == null)
                 return NotFound();
 
-            _context.Warehouses.Remove(warehouse);
+            _context.Warehouse.Remove(warehouse);
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
