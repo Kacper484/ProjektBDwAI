@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Warehouse>
+
+<h1>Lista Magazynów</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nazwa</th>
+            <th>Lokalizacja</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var warehouse in Model)
+        {
+            <tr>
+                <td>@warehouse.Name</td>
+                <td>@warehouse.Location</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@warehouse.Id">Usuń</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create">Dodaj Magazyn</a>

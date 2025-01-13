@@ -1,0 +1,15 @@
+﻿@model Order
+
+<h1>Złóż Zamówienie</h1>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Produkt:</label>
+        <select asp-for="ProductId" asp-items="ViewBag.Products"></select>
+    </div>
+    <div>
+        <label>Ilość:</label>
+        <input asp-for="Quantity" type="number" />
+    </div>
+    <button type="submit">Złóż Zamówienie</button>
+</form>
