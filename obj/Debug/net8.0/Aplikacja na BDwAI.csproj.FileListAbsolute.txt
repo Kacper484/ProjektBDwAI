@@ -170,3 +170,15 @@ C:\Users\Admin\Desktop\STUDIA\SEMESTR 5\Bazy danych\Projekt\Kody w C#\Aplikacja 
 C:\Users\Admin\Desktop\STUDIA\SEMESTR 5\Bazy danych\Projekt\Kody w C#\Aplikacja na BDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.pdb
 C:\Users\Admin\Desktop\STUDIA\SEMESTR 5\Bazy danych\Projekt\Kody w C#\Aplikacja na BDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.genruntimeconfig.cache
 C:\Users\Admin\Desktop\STUDIA\SEMESTR 5\Bazy danych\Projekt\Kody w C#\Aplikacja na BDwAI\obj\Debug\net8.0\ref\Aplikacja na BDwAI.dll
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.csproj.AssemblyReference.cache
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.AssemblyInfoInputs.cache
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.AssemblyInfo.cs
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.RazorAssemblyInfo.cache
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.RazorAssemblyInfo.cs
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.sourcelink.json
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.dll
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\refint\Aplikacja na BDwAI.dll
+C:\Users\Asus\Documents\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.pdb

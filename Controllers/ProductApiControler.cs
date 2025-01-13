@@ -1,8 +1,7 @@
+using Aplikacja_na_BDwAI.Data;
+using Aplikacja_na_BDwAI.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using ProjektBDwAI.Data; 
-using ProjektBDwAI.Models; 
-
 namespace ProjektBDwAI.Controllers
 {
     [ApiController]
