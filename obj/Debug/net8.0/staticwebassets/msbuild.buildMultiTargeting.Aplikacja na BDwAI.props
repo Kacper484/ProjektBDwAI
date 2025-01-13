@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Aplikacja na BDwAI.props" />
+</Project>
