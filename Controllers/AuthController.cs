@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Aplikacja_na_BDwAI.Data; 
-using Aplikacja_na_BDwAI.Models; 
+using Aplikacja_na_BDwAI.Data;
+using Aplikacja_na_BDwAI.Models;
+using System.Linq;
 
 namespace Aplikacja_na_BDwAI.Controllers
 {
@@ -16,21 +17,61 @@ namespace Aplikacja_na_BDwAI.Controllers
         // GET: /Auth/Login
         public IActionResult Login()
         {
-            return View(); // Formularz logowania
+            return View(new LoginViewModel());
         }
 
         // POST: /Auth/Login
         [HttpPost]
-        public IActionResult Login(string email, string password)
+        public IActionResult Login(LoginViewModel model)
         {
-            var user = _context.Users.FirstOrDefault(u => u.Email == email && u.Password == password);
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var user = _context.Users.FirstOrDefault(u => u.Email == model.Email && u.Password == model.Password);
             if (user != null)
             {
                 HttpContext.Session.SetString("UserRole", user.Role);
                 return RedirectToAction("Index", "Product");
             }
+
             ModelState.AddModelError("", "Nieprawidłowe dane logowania");
-            return View();
+            return View(model);
+        }
+
+        // GET: /Auth/Register
+        public IActionResult Register()
+        {
+            return View(new RegisterViewModel());
+        }
+
+        // POST: /Auth/Register
+        [HttpPost]
+        public IActionResult Register(RegisterViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            if (_context.Users.Any(u => u.Email == model.Email))
+            {
+                ModelState.AddModelError("", "Użytkownik z podanym adresem email już istnieje.");
+                return View(model);
+            }
+
+            var newUser = new User
+            {
+                Email = model.Email,
+                Password = model.Password, // TODO: Implement password hashing
+                Role = "User"
+            };
+
+            _context.Users.Add(newUser);
+            _context.SaveChanges();
+
+            return RedirectToAction("Login");
         }
     }
 }

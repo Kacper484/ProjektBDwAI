@@ -1,0 +1,26 @@
+@model Aplikacja_na_BDwAI.Models.RegisterViewModel
+
+<h1>Rejestracja</h1>
+
+<form asp-action="Register" method="post">
+    <div>
+        <label for="Email">Email:</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Password">Has³o:</label>
+        <input asp-for="Password" type="password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="ConfirmPassword">PotwierdŸ has³o:</label>
+        <input asp-for="ConfirmPassword" type="password" class="form-control" />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Zarejestruj siê</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
