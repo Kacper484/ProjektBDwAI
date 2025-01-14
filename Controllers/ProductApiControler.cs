@@ -2,7 +2,7 @@ using Aplikacja_na_BDwAI.Data;
 using Aplikacja_na_BDwAI.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-namespace ProjektBDwAI.Controllers
+namespace Aplikacja_na_BDwAI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

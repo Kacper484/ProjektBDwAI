@@ -1,9 +1,8 @@
-using Aplikacja_na_BDwAI.Data;
 using Microsoft.AspNetCore.Mvc;
-using ProjektBDwAI.Data; 
-using ProjektBDwAI.Models; 
+using Aplikacja_na_BDwAI.Data; 
+using Aplikacja_na_BDwAI.Models; 
 
-namespace ProjektBDwAI.Controllers
+namespace Aplikacja_na_BDwAI.Controllers
 {
     public class AuthController : Controller
     {
@@ -17,7 +16,7 @@ namespace ProjektBDwAI.Controllers
         // GET: /Auth/Login
         public IActionResult Login()
         {
-            return View(s); // Formularz logowania
+            return View(); // Formularz logowania
         }
 
         // POST: /Auth/Login

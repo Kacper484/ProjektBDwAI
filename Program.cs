@@ -1,6 +1,7 @@
 using Aplikacja_na_BDwAI;
 using Aplikacja_na_BDwAI.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 

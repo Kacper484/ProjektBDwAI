@@ -3,7 +3,7 @@ using Aplikacja_na_BDwAI.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ProjektBDwAI.Controllers
+namespace Aplikacja_na_BDwAI.Controllers
 {
     [Authorize] // Wszystkie metody wymagają logowania
         public class ProductController : Controller
