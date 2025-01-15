@@ -1,24 +1,27 @@
 ﻿@model Aplikacja_na_BDwAI.Models.LoginViewModel
 
-<h1>Logowanie</h1>
-
-<form asp-action="Login" method="post">
-    <div>
-        <label for="Email">Email:</label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow p-4" style="width: 400px;">
+        <h1 class="text-center mb-4">Logowanie</h1>
+        <form asp-action="Login" method="post">
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email:</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label for="Password" class="form-label">Hasło:</label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            @if (!string.IsNullOrEmpty(ViewData["Error"] as string))
+            {
+                <div class="text-danger mb-3">@ViewData["Error"]</div>
+            }
+            <button type="submit" class="btn btn-primary w-100">Zaloguj</button>
+        </form>
     </div>
-    <div>
-        <label for="Password">Hasło:</label>
-        <input asp-for="Password" type="password" class="form-control" />
-        <span asp-validation-for="Password" class="text-danger"></span>
-    </div>
-    @if (!string.IsNullOrEmpty(ViewData["Error"] as string))
-    {
-    <div class="text-danger">@ViewData["Error"]</div>
-    }
-    <button type="submit" class="btn btn-primary">Zaloguj</button>
-</form>
+</div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

@@ -1,21 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Mateusz Banasiak\\OneDrive\\Dokumenty\\GitHub\\ProjektBDwAI\\",
+  "WorkspaceRootPath": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\mateusz banasiak\\onedrive\\dokumenty\\github\\projektbdwai\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\order\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\order\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\mateusz banasiak\\onedrive\\dokumenty\\github\\projektbdwai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\mateusz banasiak\\onedrive\\dokumenty\\github\\projektbdwai\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\mateusz banasiak\\onedrive\\dokumenty\\github\\projektbdwai\\aplikacja na bdwai.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\aplikacja na bdwai.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:aplikacja na bdwai.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -26,59 +50,134 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Mateusz Banasiak\\OneDrive\\Dokumenty\\GitHub\\ProjektBDwAI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Mateusz Banasiak\\OneDrive\\Dokumenty\\GitHub\\ProjektBDwAI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "Views\\Order\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T15:53:46.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Order\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Order\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Order\\Create.cshtml",
+              "RelativeToolTip": "Views\\Order\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T15:53:43.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "Views\\Product\\Create.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T15:53:26.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAEAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T15:48:36.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T15:44:42.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Auth\\Register.cshtml",
+              "RelativeToolTip": "Views\\Auth\\Register.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T15:42:38.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwDkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T13:13:24.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Mateusz Banasiak\\OneDrive\\Dokumenty\\GitHub\\ProjektBDwAI\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Mateusz Banasiak\\OneDrive\\Dokumenty\\GitHub\\ProjektBDwAI\\Program.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T13:12:32.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T13:12:32.369Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Aplikacja na BDwAI.csproj",
-              "DocumentMoniker": "C:\\Users\\Mateusz Banasiak\\OneDrive\\Dokumenty\\GitHub\\ProjektBDwAI\\Aplikacja na BDwAI.csproj",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Aplikacja na BDwAI.csproj",
               "RelativeDocumentMoniker": "Aplikacja na BDwAI.csproj",
-              "ToolTip": "C:\\Users\\Mateusz Banasiak\\OneDrive\\Dokumenty\\GitHub\\ProjektBDwAI\\Aplikacja na BDwAI.csproj",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Aplikacja na BDwAI.csproj",
               "RelativeToolTip": "Aplikacja na BDwAI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-14T12:53:09.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T12:53:09.045Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Mateusz Banasiak\\OneDrive\\Dokumenty\\GitHub\\ProjektBDwAI\\Models\\ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\Mateusz Banasiak\\OneDrive\\Dokumenty\\GitHub\\ProjektBDwAI\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Models\\ErrorViewModel.cs",
               "RelativeToolTip": "Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T12:51:33.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T12:51:33.398Z"
             }
           ]
         }

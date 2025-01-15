@@ -11,15 +11,15 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-3">
+            <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">OrderManagementApp</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
@@ -28,27 +28,27 @@
                         </li>
                         @if (HttpContextAccessor.HttpContext?.Session?.GetString("UserRole") != null)
                         {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Dashboard</a>
-                        </li>
-                        @if (HttpContextAccessor.HttpContext.Session.GetString("UserRole") == "User")
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Dashboard</a>
+                            </li>
+                            @if (HttpContextAccessor.HttpContext.Session.GetString("UserRole") == "User")
                             {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="MyOrders">Moje Zamówienia</a>
-                        </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="MyOrders">Moje Zamówienia</a>
+                                </li>
                             }
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Auth" asp-action="Logout">Wyloguj się</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Auth" asp-action="Logout">Wyloguj się</a>
+                            </li>
                         }
                         else
                         {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Auth" asp-action="Login">Zaloguj się</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Auth" asp-action="Register">Zarejestruj się</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Auth" asp-action="Login">Zaloguj się</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Auth" asp-action="Register">Zarejestruj się</a>
+                            </li>
                         }
                     </ul>
                 </div>
