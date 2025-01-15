@@ -17,6 +17,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     .AddCookie(options =>
     {
         options.LoginPath = "/Auth/Login"; // Ścieżka do strony logowania
+        options.AccessDeniedPath = "/Auth/Login"; // Ścieżka w przypadku odmowy dostępu
     });
 
 builder.Services.AddAuthorization();
@@ -26,8 +27,8 @@ builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30); // Czas trwania sesji
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
+    options.Cookie.HttpOnly = true; // Ciasteczka dostępne tylko po stronie serwera
+    options.Cookie.IsEssential = true; // Wymóg dla ciasteczek sesyjnych
 });
 
 // Dodanie kontrolerów z widokami
@@ -38,14 +39,14 @@ var app = builder.Build();
 // Konfiguracja middleware
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+    app.UseExceptionHandler("/Home/Error"); // Obsługa błędów w środowisku produkcyjnym
+    app.UseHsts(); // Wymuszanie HTTPS
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
+app.UseHttpsRedirection(); // Przekierowanie na HTTPS
+app.UseStaticFiles(); // Obsługa plików statycznych
 
-app.UseRouting();
+app.UseRouting(); // Konfiguracja routingu
 
 // Middleware dla sesji
 app.UseSession();

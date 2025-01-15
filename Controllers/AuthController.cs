@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using Aplikacja_na_BDwAI.Data;
 using Aplikacja_na_BDwAI.Models;
 using System.Linq;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using System.Threading.Tasks;
 
 namespace Aplikacja_na_BDwAI.Controllers
 {
@@ -15,14 +18,15 @@ namespace Aplikacja_na_BDwAI.Controllers
         }
 
         // GET: /Auth/Login
-        public IActionResult Login()
+        public IActionResult Login(string returnUrl = null)
         {
+            ViewData["ReturnUrl"] = returnUrl; // Przechowaj adres docelowy
             return View(new LoginViewModel());
         }
 
         // POST: /Auth/Login
         [HttpPost]
-        public IActionResult Login(LoginViewModel model)
+        public IActionResult Login(LoginViewModel model, string returnUrl = null)
         {
             if (!ModelState.IsValid)
             {
@@ -33,12 +37,31 @@ namespace Aplikacja_na_BDwAI.Controllers
             if (user != null)
             {
                 HttpContext.Session.SetString("UserRole", user.Role);
-                return RedirectToAction("Index", "Product");
+                HttpContext.Session.SetString("UserEmail", user.Email);
+
+                // Przekierowanie do adresu docelowego, jeśli istnieje
+                if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                {
+                    return Redirect(returnUrl);
+                }
+
+                return RedirectToAction("Index", "Home");
             }
 
             ModelState.AddModelError("", "Nieprawidłowe dane logowania");
             return View(model);
         }
+
+        // POST: /Auth/Logout
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            HttpContext.Session.Clear(); // Wyczyść dane sesji
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login", "Auth");
+        }
+
 
         // GET: /Auth/Register
         public IActionResult Register()
@@ -71,7 +94,11 @@ namespace Aplikacja_na_BDwAI.Controllers
             _context.Users.Add(newUser);
             _context.SaveChanges();
 
-            return RedirectToAction("Login");
+            // Automatyczne logowanie po rejestracji
+            HttpContext.Session.SetString("UserRole", newUser.Role);
+            HttpContext.Session.SetString("UserEmail", newUser.Email);
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

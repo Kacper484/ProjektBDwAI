@@ -1,2 +1,27 @@
-﻿<h1>Dzień dobry, miłego zarządzania!</h1>
-<p>..................</p>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Strona Główna</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Panel Zarządzania</h1>
+        <p>Witaj w aplikacji zarządzania! Wybierz sekcję:</p>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="/Order/Index" class="btn btn-primary btn-block">Zamówienia</a>
+            </div>
+            <div class="col-md-4">
+                <a href="/Product/Index" class="btn btn-success btn-block">Produkty</a>
+            </div>
+            <div class="col-md-4">
+                <a href="/Warehouse/Index" class="btn btn-warning btn-block">Magazyn</a>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

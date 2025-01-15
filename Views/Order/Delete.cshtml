@@ -1,0 +1,16 @@
+﻿@model Order
+
+<h1>Usuń Zamówienie</h1>
+
+<p>Czy na pewno chcesz usunąć to zamówienie?</p>
+<div>
+    <strong>Produkt:</strong> @Model.Product.Name<br />
+    <strong>Ilość:</strong> @Model.Quantity<br />
+    <strong>Data Zamówienia:</strong> @Model.OrderDate
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Usuń</button>
+    <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+</form>
