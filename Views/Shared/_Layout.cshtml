@@ -28,24 +28,27 @@
                         </li>
                         @if (HttpContextAccessor.HttpContext?.Session?.GetString("UserRole") != null)
                         {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Dashboard</a>
-                            </li>
-                            @if (HttpContextAccessor.HttpContext.Session.GetString("UserRole") == "User")
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Dashboard</a>
+                        </li>
+                        @if (HttpContextAccessor.HttpContext.Session.GetString("UserRole") == "User")
                             {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="MyOrders">Moje Zamówienia</a>
-                                </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="MyOrders">Moje Zamówienia</a>
+                        </li>
                             }
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Auth" asp-action="Logout">Wyloguj się</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Auth" asp-action="Logout">Wyloguj się</a>
+                        </li>
                         }
                         else
                         {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Auth" asp-action="Login">Zaloguj się</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Auth" asp-action="Login">Zaloguj się</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Auth" asp-action="Register">Zarejestruj się</a>
+                        </li>
                         }
                     </ul>
                 </div>

@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Controllers"
+    "\\Data",
+    "\\Migrations",
+    "\\obj",
+    "\\Properties",
+    "\\Views",
+    "\\Views\\Home",
+    "\\Views\\Order",
+    "\\Views\\Product",
+    "\\Views\\Shared"
   ],
+  "SelectedNode": "\\Migrations\\ApplicationDbContextModelSnapshot.cs",
   "PreviewInSolutionExplorer": false
 }

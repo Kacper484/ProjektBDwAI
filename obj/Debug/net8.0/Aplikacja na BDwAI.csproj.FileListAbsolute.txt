@@ -351,7 +351,6 @@ C:\Users\Mateusz Banasiak\OneDrive\Dokumenty\GitHub\ProjektBDwAI\obj\Debug\net8.
 C:\Users\Mateusz Banasiak\OneDrive\Dokumenty\GitHub\ProjektBDwAI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Aplikacja na BDwAI.props
 C:\Users\Mateusz Banasiak\OneDrive\Dokumenty\GitHub\ProjektBDwAI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Aplikacja na BDwAI.props
 C:\Users\Mateusz Banasiak\OneDrive\Dokumenty\GitHub\ProjektBDwAI\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Mateusz Banasiak\OneDrive\Dokumenty\GitHub\ProjektBDwAI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Mateusz Banasiak\OneDrive\Dokumenty\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacj.4D4DD352.Up2Date
 C:\Users\Mateusz Banasiak\OneDrive\Dokumenty\GitHub\ProjektBDwAI\obj\Debug\net8.0\Aplikacja na BDwAI.genruntimeconfig.cache
 C:\Users\Mateusz Banasiak\OneDrive\Dokumenty\GitHub\ProjektBDwAI\obj\Debug\net8.0\ref\Aplikacja na BDwAI.dll
