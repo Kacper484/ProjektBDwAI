@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aplikacja_na_BDwAI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250112170820_InitialCreate")]
+    [Migration("20250115134802_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -33,7 +33,7 @@ namespace Aplikacja_na_BDwAI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Aderess")
+                    b.Property<string>("Address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -134,6 +134,24 @@ namespace Aplikacja_na_BDwAI.Migrations
                     b.HasIndex("WarehouseId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Laptop",
+                            Price = 1200.50m,
+                            Quantity = 50,
+                            WarehouseId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Smartphone",
+                            Price = 800.99m,
+                            Quantity = 100,
+                            WarehouseId = 2
+                        });
                 });
 
             modelBuilder.Entity("Aplikacja_na_BDwAI.Models.User", b =>
@@ -180,6 +198,20 @@ namespace Aplikacja_na_BDwAI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Warehouse");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Location = "Cracow",
+                            Name = "Central Warehouse"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Location = "Warsaw",
+                            Name = "Secondary Warehouse"
+                        });
                 });
 
             modelBuilder.Entity("Aplikacja_na_BDwAI.Models.Order", b =>

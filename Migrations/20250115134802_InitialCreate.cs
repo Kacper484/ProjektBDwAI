@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace Aplikacja_na_BDwAI.Migrations
 {
     /// <inheritdoc />
@@ -20,7 +22,7 @@ namespace Aplikacja_na_BDwAI.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Aderess = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -125,6 +127,24 @@ namespace Aplikacja_na_BDwAI.Migrations
                         principalTable: "Orders",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Warehouse",
+                columns: new[] { "Id", "Location", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Cracow", "Central Warehouse" },
+                    { 2, "Warsaw", "Secondary Warehouse" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "Name", "Price", "Quantity", "WarehouseId" },
+                values: new object[,]
+                {
+                    { 1, "Laptop", 1200.50m, 50, 1 },
+                    { 2, "Smartphone", 800.99m, 100, 2 }
                 });
 
             migrationBuilder.CreateIndex(

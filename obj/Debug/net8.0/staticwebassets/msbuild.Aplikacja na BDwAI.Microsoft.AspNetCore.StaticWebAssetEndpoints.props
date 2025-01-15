@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Aplikacja na BDwAI.t80sxk48zk.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-wz5I3Q\u002BaSNKcil4zO7SauJzUPrv4LQks6lsRzpChlq8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022wz5I3Q\u002BaSNKcil4zO7SauJzUPrv4LQks6lsRzpChlq8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 22:08:08 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022wz5I3Q\u002BaSNKcil4zO7SauJzUPrv4LQks6lsRzpChlq8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 15 Jan 2025 13:47:28 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Aplikacja na BDwAI/Aplikacja na BDwAI.t80sxk48zk.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Aplikacja na BDwAI.t80sxk48zk.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"t80sxk48zk"},{"Name":"integrity","Value":"sha256-wz5I3Q\u002BaSNKcil4zO7SauJzUPrv4LQks6lsRzpChlq8="},{"Name":"label","Value":"_content/Aplikacja na BDwAI/Aplikacja na BDwAI.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022wz5I3Q\u002BaSNKcil4zO7SauJzUPrv4LQks6lsRzpChlq8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 22:08:08 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022wz5I3Q\u002BaSNKcil4zO7SauJzUPrv4LQks6lsRzpChlq8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 15 Jan 2025 13:47:28 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Aplikacja na BDwAI/css/site.c2tiyv64ts.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
