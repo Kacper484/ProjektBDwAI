@@ -10,16 +10,20 @@
 <body>
     <div class="container mt-5">
         <h1 class="text-center text-danger">Usuń Zamówienie</h1>
-        @if (User.Identity.IsAuthenticated) {
-        <p>Czy na pewno chcesz usunąć to zamówienie?</p>
-        <p><strong>Produkt:</strong> @Model.Product.Name</p>
-        <p><strong>Ilość:</strong> @Model.Quantity</p>
-        <form method="post" action="/Order/Delete/@Model.Id">
-            <button type="submit" class="btn btn-danger">Usuń</button>
-            <a href="/Order/Index" class="btn btn-secondary">Anuluj</a>
-        </form>
-        } else {
-        <p class="text-center text-danger">Musisz się zalogować, aby usunąć zamówienie.</p>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <p>Czy na pewno chcesz usunąć to zamówienie?</p>
+            <p><strong>Produkt:</strong> @Model.Product.Name</p>
+            <p><strong>Ilość:</strong> @Model.Quantity</p>
+            <form asp-action="Delete" method="post">
+                <input type="hidden" name="id" value="@Model.Id" />
+                <button type="submit" class="btn btn-danger">Usuń</button>
+                <a href="/Order/Index" class="btn btn-secondary">Anuluj</a>
+            </form>
+        }
+        else
+        {
+            <p class="text-center text-danger">Musisz się zalogować, aby usunąć zamówienie.</p>
         }
     </div>
 </body>

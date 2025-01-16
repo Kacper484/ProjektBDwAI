@@ -1,29 +1,27 @@
-﻿@model Aplikacja_na_BDwAI.Models.Order
-
-<div class="container mt-5">
+﻿<div class="container mt-5">
     <h1 class="mb-4 text-center">Dodaj Zamówienie</h1>
 
     <form asp-action="Create" method="post" class="card p-4 shadow-sm">
         <div class="form-group mb-3">
-            <label for="ProductId" class="form-label">Produkt:</label>
-            <select asp-for="ProductId" class="form-select">
-                <option value="">Wybierz produkt</option>
-                @foreach (var product in (List<Aplikacja_na_BDwAI.Models.Product>)ViewData["Products"])
+            <label for="productId" class="form-label">Produkt:</label>
+            <select name="productId" class="form-select">
+                <option value="">-- Wybierz produkt --</option>
+                @foreach (var product in ViewBag.Products as SelectList)
                 {
-                    <option value="@product.Id">@product.Name</option>
+                    <option value="@product.Value">@product.Text</option>
                 }
             </select>
-            <span asp-validation-for="ProductId" class="text-danger"></span>
+            <span class="text-danger"></span>
         </div>
 
         <div class="form-group mb-3">
-            <label for="Quantity" class="form-label">Ilość:</label>
-            <input asp-for="Quantity" class="form-control" type="number" placeholder="Wprowadź ilość" />
-            <span asp-validation-for="Quantity" class="text-danger"></span>
+            <label for="quantity" class="form-label">Ilość:</label>
+            <input name="quantity" type="number" class="form-control" placeholder="Wprowadź ilość" />
+            <span class="text-danger"></span>
         </div>
 
         <div class="d-flex">
-            <button type="submit" class="btn btn-primary w-auto me-2">Zapisz</button>
+            <button type="submit" class="btn btn-primary w-auto me-2">Dodaj Zamówienie</button>
             <a asp-action="Index" class="btn btn-secondary w-auto">Powrót</a>
         </div>
     </form>

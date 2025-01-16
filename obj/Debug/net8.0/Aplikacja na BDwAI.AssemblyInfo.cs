@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aplikacja na BDwAI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db7ab5e4fc23a064059068fc3f3d66966f736323")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ea14372c34139f6528cad12518d0f8ed8991cb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aplikacja na BDwAI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aplikacja na BDwAI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

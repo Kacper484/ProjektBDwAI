@@ -2,6 +2,7 @@ using Aplikacja_na_BDwAI.Data;
 using Aplikacja_na_BDwAI.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace Aplikacja_na_BDwAI.Controllers
             _context = context;
         }
 
+        // Wyœwietlanie listy zamówieñ
         public IActionResult Index()
         {
             var orders = _context.Orders
@@ -27,54 +29,85 @@ namespace Aplikacja_na_BDwAI.Controllers
             return View(orders);
         }
 
+        // GET: Wyœwietlenie formularza dodawania zamówienia
         public IActionResult Create()
         {
-            var products = _context.Products.ToList();
-
-            // Logowanie liczby produktów dla diagnostyki
-            Console.WriteLine($"Number of products available: {products.Count}");
-
-            // Przekazanie listy produktów do ViewData
-            ViewData["Products"] = products;
-
-            if (!products.Any())
-            {
-                ViewBag.ErrorMessage = "Brak dostêpnych produktów. Dodaj produkty przed tworzeniem zamówienia.";
-            }
-
+            ViewBag.Products = new SelectList(_context.Products.ToList(), "Id", "Name");
             return View();
         }
 
+        // POST: Obs³uga dodawania zamówienia
         [HttpPost]
-        public IActionResult Create(Order order)
+        public IActionResult Create(int productId, int quantity)
         {
+            if (productId <= 0 || quantity <= 0)
+            {
+                ModelState.AddModelError("", "Wszystkie pola s¹ wymagane i musz¹ byæ poprawnie wype³nione.");
+            }
+
             if (ModelState.IsValid)
             {
                 try
                 {
-                    // Ustawienie UserId (przyk³ad: na sta³e lub z sesji u¿ytkownika)
-                    order.UserId = 1; // Dostosuj do rzeczywistego zalogowanego u¿ytkownika
+                    var order = new Order
+                    {
+                        ProductId = productId,
+                        Quantity = quantity,
+                        UserId = 1, // Dostosuj do aktualnie zalogowanego u¿ytkownika
+                        OrderDate = DateTime.Now
+                    };
 
-                    // Ustawienie daty zamówienia
-                    order.OrderDate = DateTime.Now;
-
-                    // Dodanie zamówienia do bazy danych
                     _context.Orders.Add(order);
                     _context.SaveChanges();
-
-                    Console.WriteLine("Order saved successfully!");
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction("Index");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error while saving order: {ex.Message}");
-                    ModelState.AddModelError("", "Wyst¹pi³ b³¹d podczas zapisywania zamówienia.");
+                    ModelState.AddModelError("", "Wyst¹pi³ b³¹d podczas zapisywania zamówienia: " + ex.Message);
                 }
             }
 
-            // Ponowne za³adowanie listy produktów w przypadku b³êdów
-            ViewData["Products"] = _context.Products.ToList();
+            ViewBag.Products = new SelectList(_context.Products.ToList(), "Id", "Name");
+            return View();
+        }
+
+        // GET: Wyœwietlenie potwierdzenia usuniêcia zamówienia
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var order = _context.Orders
+                .Include(o => o.Product)
+                .FirstOrDefault(o => o.Id == id);
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
             return View(order);
+        }
+
+        // POST: Usuniêcie zamówienia
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var order = _context.Orders.Find(id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            try
+            {
+                _context.Orders.Remove(order);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Wyst¹pi³ b³¹d podczas usuwania zamówienia: " + ex.Message);
+                return RedirectToAction("Delete", new { id });
+            }
         }
     }
 }
