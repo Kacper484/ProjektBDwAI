@@ -1,49 +1,50 @@
-﻿@model IEnumerable<Order>
+﻿@model IEnumerable<Aplikacja_na_BDwAI.Models.Order>
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Lista Zamówień</title>
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    </head>
-    <body>
-        <div class="container mt-5">
-            <h1 class="text-center">Lista Zamówień</h1>
-            @if (User.Identity.IsAuthenticated) {
-            <a href="/Order/Create" class="btn btn-success mb-3">Dodaj Zamówienie</a>
-            <table class="table table-bordered table-hover">
-                <thead class="table-light">
+<div class="container mt-5">
+    <h1 class="text-center text-primary">Lista Zamówień</h1>
+
+    <a asp-action="Create" class="btn btn-success mb-3">Dodaj Zamówienie</a>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-primary">
+            <tr>
+                <th>#</th>
+                <th>Produkt</th>
+                <th>Ilość</th>
+                <th>Data Zamówienia</th>
+                @if (User.IsInRole("Admin"))
+                {
+                    <th>Akcje</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                int counter = 1;
+                foreach (var order in Model)
+                {
                     <tr>
-                        <th>#</th>
-                        <th>Produkt</th>
-                        <th>Ilość</th>
-                        <th>Data Zamówienia</th>
-                        <th>Akcje</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var order in Model)
-                    {
-                    <tr>
-                        <td>@order.Id</td>
+                        <td>@counter</td>
                         <td>@order.Product.Name</td>
                         <td>@order.Quantity</td>
-                        <td>@order.OrderDate.ToString("dd-MM-yyyy")</td>
-                        <td>
-                            <a href="/Order/Edit/@order.Id" class="btn btn-primary btn-sm">Edytuj</a>
-                            <a href="/Order/Delete/@order.Id" class="btn btn-danger btn-sm">Usuń</a>
-                        </td>
+                        <td>@order.OrderDate.ToShortDateString()</td>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <td>
+                                <a asp-action="Delete" asp-route-id="@order.Id" class="btn btn-danger">Usuń</a>
+                            </td>
+                        }
                     </tr>
-                    }
-                </tbody>
-            </table>
-        } else {
-            <p class="text-center">Musisz się zalogować, aby zobaczyć listę zamówień.</p>
-            <div class="text-center">
-                <a href="/Auth/Login" class="btn btn-success">Zaloguj się</a>
-            </div>
-        }
-        </div>
-    </body>
-</html>
+                    counter++;
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" class="text-center">Brak zamówień.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

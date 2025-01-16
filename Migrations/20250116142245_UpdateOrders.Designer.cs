@@ -4,6 +4,7 @@ using Aplikacja_na_BDwAI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aplikacja_na_BDwAI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250116142245_UpdateOrders")]
+    partial class UpdateOrders
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,6 +25,35 @@ namespace Aplikacja_na_BDwAI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Aplikacja_na_BDwAI.Models.Customer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Customers");
+                });
+
             modelBuilder.Entity("Aplikacja_na_BDwAI.Models.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -29,6 +61,9 @@ namespace Aplikacja_na_BDwAI.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
@@ -39,16 +74,38 @@ namespace Aplikacja_na_BDwAI.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
 
                     b.HasIndex("ProductId");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Aplikacja_na_BDwAI.Models.Payment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("PaymentDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId")
+                        .IsUnique();
+
+                    b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("Aplikacja_na_BDwAI.Models.Product", b =>
@@ -77,6 +134,24 @@ namespace Aplikacja_na_BDwAI.Migrations
                     b.HasIndex("WarehouseId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Laptop",
+                            Price = 1200.50m,
+                            Quantity = 50,
+                            WarehouseId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Smartphone",
+                            Price = 800.99m,
+                            Quantity = 100,
+                            WarehouseId = 2
+                        });
                 });
 
             modelBuilder.Entity("Aplikacja_na_BDwAI.Models.User", b =>
@@ -123,25 +198,50 @@ namespace Aplikacja_na_BDwAI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Warehouse");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Location = "Cracow",
+                            Name = "Central Warehouse"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Location = "Warsaw",
+                            Name = "Secondary Warehouse"
+                        });
                 });
 
             modelBuilder.Entity("Aplikacja_na_BDwAI.Models.Order", b =>
                 {
+                    b.HasOne("Aplikacja_na_BDwAI.Models.Customer", "Customer")
+                        .WithMany("Orders")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Aplikacja_na_BDwAI.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Aplikacja_na_BDwAI.Models.User", "User")
-                        .WithMany("Orders")
-                        .HasForeignKey("UserId")
+                    b.Navigation("Customer");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Aplikacja_na_BDwAI.Models.Payment", b =>
+                {
+                    b.HasOne("Aplikacja_na_BDwAI.Models.Order", "Order")
+                        .WithOne("Payment")
+                        .HasForeignKey("Aplikacja_na_BDwAI.Models.Payment", "OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Product");
-
-                    b.Navigation("User");
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("Aplikacja_na_BDwAI.Models.Product", b =>
@@ -155,9 +255,15 @@ namespace Aplikacja_na_BDwAI.Migrations
                     b.Navigation("Warehouse");
                 });
 
-            modelBuilder.Entity("Aplikacja_na_BDwAI.Models.User", b =>
+            modelBuilder.Entity("Aplikacja_na_BDwAI.Models.Customer", b =>
                 {
                     b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("Aplikacja_na_BDwAI.Models.Order", b =>
+                {
+                    b.Navigation("Payment")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Aplikacja_na_BDwAI.Models.Warehouse", b =>
