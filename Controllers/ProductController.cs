@@ -26,9 +26,8 @@ namespace Aplikacja_na_BDwAI.Controllers
 
         public IActionResult Create()
         {
-            // Przekazanie listy magazynów do widoku
             ViewData["Warehouses"] = _context.Warehouse.ToList();
-            return View();
+            return View(new Product()); // Tworzymy pusty model, aby uniknąć błędu w widoku
         }
 
         [HttpPost]
@@ -41,10 +40,48 @@ namespace Aplikacja_na_BDwAI.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewData["Warehouses"] = _context.Warehouse.ToList(); // Ładujemy magazyny w przypadku błędów
+            return View(product);
+        }
+
+
+        public IActionResult Edit(int id)
+        {
+            var product = _context.Products.Find(id);
+            if (product == null)
+                return NotFound();
+
+            // Load warehouses for dropdown (if needed)
+            ViewData["Warehouses"] = _context.Warehouse.ToList();
+            return View(product);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, Product product)
+        {
+            if (id != product.Id)
+                return BadRequest();
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Products.Update(product);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    // Logowanie błędu (jeśli potrzeba)
+                    ModelState.AddModelError(string.Empty, "Wystąpił błąd podczas zapisywania danych.");
+                }
+            }
+
             // Ponowne załadowanie listy magazynów w przypadku błędu
             ViewData["Warehouses"] = _context.Warehouse.ToList();
             return View(product);
         }
+
 
         [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)

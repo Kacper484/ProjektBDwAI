@@ -1,53 +1,35 @@
 ﻿@model IEnumerable<Product>
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Lista Produktów</title>
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    </head>
-    <body>
-        <div class="container mt-5">
-            <h1 class="text-center">Lista Produktów</h1>
-            @if (User.Identity.IsAuthenticated) {
-            @if (User.IsInRole("Admin")) {
-            <a href="/Product/Create" class="btn btn-success mb-3">Dodaj Produkt</a>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Lista Produktów</h1>
+    <a asp-action="Create" class="btn btn-success mb-3">Dodaj Produkt</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nazwa</th>
+                <th>Cena</th>
+                <th>Ilość</th>
+                <th>Magazyn</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td>@product.Quantity</td>
+                    <td>@product.Warehouse?.Name</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-primary btn-sm">Edytuj</a>
+                        <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger btn-sm">Usuń</a>
+                    </td>
+                </tr>
             }
-            <table class="table table-bordered table-hover">
-                <thead class="table-light">
-                    <tr>
-                        <th>#</th>
-                        <th>Nazwa</th>
-                        <th>Cena</th>
-                        <th>Ilość</th>
-                        <th>Akcje</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var product in Model)
-                    {
-                    <tr>
-                        <td>@product.Id</td>
-                        <td>@product.Name</td>
-                        <td>@product.Price.ToString("C")</td>
-                        <td>@product.Quantity</td>
-                        <td>
-                            @if (User.IsInRole("Admin")) {
-                            <a href="/Product/Edit/@product.Id" class="btn btn-primary btn-sm">Edytuj</a>
-                            <a href="/Product/Delete/@product.Id" class="btn btn-danger btn-sm">Usuń</a>
-                                }
-                        </td>
-                    </tr>
-                    }
-                </tbody>
-            </table>
-        } else {
-            <p class="text-center">Musisz się zalogować, aby zobaczyć listę produktów.</p>
-            <div class="text-center">
-                <a href="/Auth/Login" class="btn btn-success">Zaloguj się</a>
-            </div>
-        }
-        </div>
-    </body>
-</html>
+        </tbody>
+    </table>
+</div>

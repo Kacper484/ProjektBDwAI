@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\order\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\order\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\migrations\\20250116151547_fixorderstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:migrations\\20250116151547_fixorderstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Migrations\\20250116151311_RemoveCustomerIdFromOrders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250116151311_RemoveCustomerIdFromOrders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -35,8 +67,8 @@
       "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\views\\order\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:views\\order\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|c:\\users\\asus\\documents\\github\\projektbdwai\\migrations\\20250116151311_removecustomeridfromorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7C031A-6EDD-45DB-8E42-2F4594B302F0}|Aplikacja na BDwAI.csproj|solutionrelative:migrations\\20250116151311_removecustomeridfromorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,24 +78,127 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250116151547_FixOrdersTable.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Migrations\\20250116151547_FixOrdersTable.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250116151547_FixOrdersTable.cs",
-              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Migrations\\20250116151547_FixOrdersTable.cs*",
-              "RelativeToolTip": "Migrations\\20250116151547_FixOrdersTable.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T15:15:47.236Z",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T22:46:07.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Auth\\Register.cshtml",
+              "RelativeToolTip": "Views\\Auth\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T22:46:05.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T22:46:03.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T22:45:53.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "Views\\Product\\Create.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAUwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T22:33:39.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:10:12.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Order\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Order\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Order\\Create.cshtml",
+              "RelativeToolTip": "Views\\Order\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T14:19:50.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Product\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Product\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Product\\Edit.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T21:56:20.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20250116151547_FixOrdersTable.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Migrations\\20250116151547_FixOrdersTable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250116151547_FixOrdersTable.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Migrations\\20250116151547_FixOrdersTable.cs",
+              "RelativeToolTip": "Migrations\\20250116151547_FixOrdersTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T15:15:47.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -71,12 +206,24 @@
               "RelativeToolTip": "Migrations\\ApplicationDbContextModelSnapshot.cs",
               "ViewState": "AgIAAJEAAAAAAAAAAAAqwKoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T15:13:29.194Z",
+              "WhenOpened": "2025-01-16T15:13:29.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T22:40:06.988Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 16,
               "Title": "20250116151311_RemoveCustomerIdFromOrders.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Migrations\\20250116151311_RemoveCustomerIdFromOrders.cs",
               "RelativeDocumentMoniker": "Migrations\\20250116151311_RemoveCustomerIdFromOrders.cs",
@@ -84,12 +231,11 @@
               "RelativeToolTip": "Migrations\\20250116151311_RemoveCustomerIdFromOrders.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T15:13:11.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T15:13:11.238Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -97,12 +243,11 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T14:45:19.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T14:45:19.362Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -110,12 +255,11 @@
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAqwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T14:33:40.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T14:33:40.672Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Models\\Order.cs",
               "RelativeDocumentMoniker": "Models\\Order.cs",
@@ -123,12 +267,11 @@
               "RelativeToolTip": "Models\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T14:32:53.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T14:32:53.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Order\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Order\\Index.cshtml",
@@ -136,25 +279,11 @@
               "RelativeToolTip": "Views\\Order\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T14:20:45.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T14:20:45.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Order\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Order\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Views\\Order\\Create.cshtml",
-              "RelativeToolTip": "Views\\Order\\Create.cshtml",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAqwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T14:19:50.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\ProjektBDwAI\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
@@ -162,8 +291,7 @@
               "RelativeToolTip": "Controllers\\OrderController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T14:19:19.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T14:19:19.401Z"
             }
           ]
         }
