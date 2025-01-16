@@ -29,9 +29,10 @@ namespace Aplikacja_na_BDwAI.Data
 
             // Relacja: Order -> Product (jeden produkt na zamówienie)
             modelBuilder.Entity<Order>()
-                .HasOne(o => o.Product)
-                .WithMany()
-                .HasForeignKey(o => o.ProductId);
+           .HasOne(o => o.Product)
+           .WithMany()
+           .HasForeignKey(o => o.ProductId)
+           .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Product>()
                 .Property(p => p.Price)

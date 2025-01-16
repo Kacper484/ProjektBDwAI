@@ -37,7 +37,7 @@ namespace Aplikacja_na_BDwAI.Controllers
             var user = _context.Users.FirstOrDefault(u => u.Email == model.Email && u.Password == model.Password);
             if (user != null)
             {
-                // Tworzenie tożsamości użytkownika
+                // Tworzenie tokenu uwierzytelniania
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.Email),
@@ -47,13 +47,14 @@ namespace Aplikacja_na_BDwAI.Controllers
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var principal = new ClaimsPrincipal(identity);
 
+                // Zalogowanie użytkownika
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-                // Ustawienie sesji
+                // Ustawianie danych w sesji
                 HttpContext.Session.SetString("UserRole", user.Role);
                 HttpContext.Session.SetString("UserEmail", user.Email);
 
-                // Przekierowanie do adresu docelowego, jeśli istnieje
+                // Przekierowanie do docelowego adresu (jeśli podany) lub na stronę główną
                 if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                 {
                     return Redirect(returnUrl);
@@ -62,57 +63,19 @@ namespace Aplikacja_na_BDwAI.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
+            // Jeśli dane logowania są nieprawidłowe, dodaj błąd do ModelState
             ModelState.AddModelError("", "Nieprawidłowe dane logowania");
             return View(model);
         }
 
         // POST: /Auth/Logout
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
-            HttpContext.Session.Clear(); // Wyczyść dane sesji
+            // Wylogowanie użytkownika i wyczyszczenie sesji
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            HttpContext.Session.Clear();
             return RedirectToAction("Login", "Auth");
-        }
-
-
-        // GET: /Auth/Register
-        public IActionResult Register()
-        {
-            return View(new RegisterViewModel());
-        }
-
-        // POST: /Auth/Register
-        [HttpPost]
-        public IActionResult Register(RegisterViewModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-
-            if (_context.Users.Any(u => u.Email == model.Email))
-            {
-                ModelState.AddModelError("", "Użytkownik z podanym adresem email już istnieje.");
-                return View(model);
-            }
-
-            var newUser = new User
-            {
-                Email = model.Email,
-                Password = model.Password, // TODO: Implement password hashing
-                Role = "User"
-            };
-
-            _context.Users.Add(newUser);
-            _context.SaveChanges();
-
-            // Automatyczne logowanie po rejestracji
-            HttpContext.Session.SetString("UserRole", newUser.Role);
-            HttpContext.Session.SetString("UserEmail", newUser.Email);
-
-            return RedirectToAction("Index", "Home");
         }
     }
 }

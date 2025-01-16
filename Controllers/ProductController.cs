@@ -2,6 +2,7 @@ using Aplikacja_na_BDwAI.Data;
 using Aplikacja_na_BDwAI.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aplikacja_na_BDwAI.Controllers
 {
@@ -17,12 +18,16 @@ namespace Aplikacja_na_BDwAI.Controllers
 
         public IActionResult Index()
         {
-            var products = _context.Products.ToList();
+            var products = _context.Products
+                .Include(p => p.Warehouse)
+                .ToList();
             return View(products);
         }
 
         public IActionResult Create()
         {
+            // Przekazanie listy magazynów do widoku
+            ViewData["Warehouses"] = _context.Warehouse.ToList();
             return View();
         }
 
@@ -33,16 +38,20 @@ namespace Aplikacja_na_BDwAI.Controllers
             {
                 _context.Products.Add(product);
                 _context.SaveChanges();
-                return RedirectToAction("Index"); // Przekierowanie na listę produktów
+                return RedirectToAction("Index");
             }
 
+            // Ponowne załadowanie listy magazynów w przypadku błędu
+            ViewData["Warehouses"] = _context.Warehouse.ToList();
             return View(product);
         }
 
         [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
-            var product = _context.Products.Find(id);
+            var product = _context.Products
+                .Include(p => p.Warehouse)
+                .FirstOrDefault(p => p.Id == id);
             if (product == null)
                 return NotFound();
 

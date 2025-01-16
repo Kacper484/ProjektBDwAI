@@ -26,10 +26,13 @@ builder.Services.AddAuthorization();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Czas trwania sesji
+    options.IdleTimeout = TimeSpan.FromMinutes(5); // Czas trwania sesji
     options.Cookie.HttpOnly = true; // Ciasteczka dostępne tylko po stronie serwera
     options.Cookie.IsEssential = true; // Wymóg dla ciasteczek sesyjnych
 });
+
+
+
 
 // Dodanie kontrolerów z widokami
 builder.Services.AddControllersWithViews();
