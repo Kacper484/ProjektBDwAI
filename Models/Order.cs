@@ -5,7 +5,7 @@ namespace Aplikacja_na_BDwAI.Models
 {
     public class Order
     {
-        public int Id { get; set; } // Klucz główny
+        public int Id { get; set; } 
 
 
         public DateTime OrderDate { get; set; } = DateTime.Now;
@@ -16,10 +16,10 @@ namespace Aplikacja_na_BDwAI.Models
         [Required]
         public int Quantity { get; set; }
 
-        public int UserId { get; set; } // Klucz obcy do encji User
+        public int UserId { get; set; } 
 
-        // Relacje
-        public User User { get; set; } = default!; // Relacja z encją User
-        public Product Product { get; set; } = default!; // Relacja z encją Product 
+        
+        public User User { get; set; } = default!; 
+        public Product Product { get; set; } = default!; 
     }
 }

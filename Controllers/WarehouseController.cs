@@ -30,7 +30,6 @@ namespace ProjektBDwAI.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Dodanie magazynu do bazy danych
                 _context.Warehouse.Add(warehouse);
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));

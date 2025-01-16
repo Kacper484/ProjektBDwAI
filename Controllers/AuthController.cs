@@ -18,14 +18,12 @@ namespace Aplikacja_na_BDwAI.Controllers
             _context = context;
         }
 
-        // GET: /Auth/Login
         public IActionResult Login(string returnUrl = null)
         {
-            ViewData["ReturnUrl"] = returnUrl; // Przechowaj adres docelowy
+            ViewData["ReturnUrl"] = returnUrl; 
             return View(new LoginViewModel());
         }
 
-        // POST: /Auth/Login
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
         {
@@ -37,7 +35,6 @@ namespace Aplikacja_na_BDwAI.Controllers
             var user = _context.Users.FirstOrDefault(u => u.Email == model.Email && u.Password == model.Password);
             if (user != null)
             {
-                // Tworzenie tokenu uwierzytelniania
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.Email),
@@ -47,14 +44,14 @@ namespace Aplikacja_na_BDwAI.Controllers
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var principal = new ClaimsPrincipal(identity);
 
-                // Zalogowanie użytkownika
+      
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-                // Ustawianie danych w sesji
+    
                 HttpContext.Session.SetString("UserRole", user.Role);
                 HttpContext.Session.SetString("UserEmail", user.Email);
 
-                // Przekierowanie do docelowego adresu (jeśli podany) lub na stronę główną
+              
                 if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                 {
                     return Redirect(returnUrl);
@@ -63,16 +60,15 @@ namespace Aplikacja_na_BDwAI.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            // Jeśli dane logowania są nieprawidłowe, dodaj błąd do ModelState
+           
             ModelState.AddModelError("", "Nieprawidłowe dane logowania");
             return View(model);
         }
 
-        // POST: /Auth/Logout
+   
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
-            // Wylogowanie użytkownika i wyczyszczenie sesji
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             HttpContext.Session.Clear();
             return RedirectToAction("Login", "Auth");

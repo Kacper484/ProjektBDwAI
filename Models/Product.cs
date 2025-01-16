@@ -4,7 +4,7 @@ namespace Aplikacja_na_BDwAI.Models
 {
     public class Product
     {
-        public int Id { get; set; } // Klucz główny
+        public int Id { get; set; } 
 
         [Required]
         public string Name { get; set; }
@@ -16,9 +16,8 @@ namespace Aplikacja_na_BDwAI.Models
         public int Quantity { get; set; }
 
         [Required]
-        public int WarehouseId { get; set; } // Klucz obcy do encji Warehouse
+        public int WarehouseId { get; set; } 
 
-        // Relacja
-        public Warehouse Warehouse { get; set; } // Relacja z encją Warehouse
+        public Warehouse Warehouse { get; set; } 
     }
 }

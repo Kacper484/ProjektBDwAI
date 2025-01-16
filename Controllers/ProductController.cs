@@ -17,7 +17,6 @@ namespace Aplikacja_na_BDwAI.Controllers
             _context = context;
         }
 
-        // Akcja wyświetlająca listę produktów
         public IActionResult Index()
         {
             var products = _context.Products
@@ -26,19 +25,15 @@ namespace Aplikacja_na_BDwAI.Controllers
             return View(products);
         }
 
-        // GET: Wyświetlenie formularza dodawania produktu
         public IActionResult Create()
         {
-            // Załadowanie listy magazynów
             ViewBag.Warehouses = new SelectList(_context.Warehouse.ToList(), "Id", "Name");
             return View();
         }
 
-        // POST: Obsługa dodawania produktu
         [HttpPost]
         public IActionResult Create(string name, decimal price, int quantity, int warehouseId)
         {
-            // Walidacja danych
             if (string.IsNullOrEmpty(name) || price <= 0 || quantity <= 0 || warehouseId <= 0)
             {
                 ModelState.AddModelError("", "Wszystkie pola są wymagane i muszą być poprawnie wypełnione.");
@@ -66,28 +61,24 @@ namespace Aplikacja_na_BDwAI.Controllers
                 }
             }
 
-            // Ponowne załadowanie magazynów w przypadku błędu
             ViewBag.Warehouses = new SelectList(_context.Warehouse.ToList(), "Id", "Name");
             return View();
         }
 
-        // GET: Wyświetlenie formularza edycji produktu
         public IActionResult Edit(int id)
         {
             var product = _context.Products.Find(id);
             if (product == null)
                 return NotFound();
 
-            // Załadowanie listy magazynów
             ViewBag.Warehouses = new SelectList(_context.Warehouse.ToList(), "Id", "Name", product.WarehouseId);
             return View(product);
         }
 
-        // POST: Obsługa edycji produktu
+
         [HttpPost]
         public IActionResult Edit(int id, string name, decimal price, int quantity, int warehouseId)
         {
-            // Walidacja danych
             if (id <= 0 || string.IsNullOrEmpty(name) || price <= 0 || quantity <= 0 || warehouseId <= 0)
             {
                 ModelState.AddModelError("", "Wszystkie pola są wymagane i muszą być poprawnie wypełnione.");
@@ -116,12 +107,10 @@ namespace Aplikacja_na_BDwAI.Controllers
                 }
             }
 
-            // Ponowne załadowanie magazynów w przypadku błędu
             ViewBag.Warehouses = new SelectList(_context.Warehouse.ToList(), "Id", "Name", warehouseId);
             return View();
         }
 
-        // GET: Wyświetlenie formularza usuwania produktu
         [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
@@ -134,7 +123,6 @@ namespace Aplikacja_na_BDwAI.Controllers
             return View(product);
         }
 
-        // POST: Potwierdzenie usunięcia produktu
         [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)

@@ -19,7 +19,6 @@ namespace Aplikacja_na_BDwAI.Controllers
             _context = context;
         }
 
-        // Wyœwietlanie listy zamówieñ
         public IActionResult Index()
         {
             var orders = _context.Orders
@@ -29,14 +28,12 @@ namespace Aplikacja_na_BDwAI.Controllers
             return View(orders);
         }
 
-        // GET: Wyœwietlenie formularza dodawania zamówienia
         public IActionResult Create()
         {
             ViewBag.Products = new SelectList(_context.Products.ToList(), "Id", "Name");
             return View();
         }
 
-        // POST: Obs³uga dodawania zamówienia
         [HttpPost]
         public IActionResult Create(int productId, int quantity)
         {
@@ -53,7 +50,7 @@ namespace Aplikacja_na_BDwAI.Controllers
                     {
                         ProductId = productId,
                         Quantity = quantity,
-                        UserId = 1, // Dostosuj do aktualnie zalogowanego u¿ytkownika
+                        UserId = 1, 
                         OrderDate = DateTime.Now
                     };
 
@@ -71,7 +68,6 @@ namespace Aplikacja_na_BDwAI.Controllers
             return View();
         }
 
-        // GET: Wyœwietlenie potwierdzenia usuniêcia zamówienia
         [HttpGet]
         public IActionResult Delete(int id)
         {
@@ -87,7 +83,6 @@ namespace Aplikacja_na_BDwAI.Controllers
             return View(order);
         }
 
-        // POST: Usuniêcie zamówienia
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {

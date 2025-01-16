@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Controllers",
-    "\\Migrations",
-    "\\Models",
     "\\Views",
-    "\\Views\\Home",
-    "\\Views\\Order",
     "\\Views\\Product",
     "\\Views\\Shared",
-    "\\Views\\Warehouse"
+    "\\Views\\Warehouse",
+    "\\wwwroot",
+    "\\wwwroot\\css",
+    "\\wwwroot\\js",
+    "\\wwwroot\\lib",
+    "\\wwwroot\\lib\\bootstrap"
   ],
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }

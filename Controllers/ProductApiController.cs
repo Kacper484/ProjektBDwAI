@@ -16,16 +16,14 @@ namespace Aplikacja_na_BDwAI.Controllers
             _context = context;
         }
 
-        // GET: api/Product
         [HttpGet]
         [Authorize] 
         public IActionResult GetAll()
         {
             var products = _context.Products.ToList();
-            return Ok(products); // Zwraca listę produktów
+            return Ok(products); 
         }
 
-        // GET: api/Product/{id}
         [HttpGet("{id}")]
         [Authorize] 
         public IActionResult Get(int id)
@@ -35,25 +33,23 @@ namespace Aplikacja_na_BDwAI.Controllers
             {
                 return NotFound(); 
             }
-            return Ok(product); // Zwraca szczegóły produktu
+            return Ok(product); 
         }
 
-        // POST: api/Product
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public IActionResult Create([FromBody] Product product)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState); // Walidacja nieudana
+                return BadRequest(ModelState); 
             }
 
             _context.Products.Add(product);
             _context.SaveChanges();
-            return CreatedAtAction(nameof(Get), new { id = product.Id }, product); // Zwraca nowo utworzony produkt
+            return CreatedAtAction(nameof(Get), new { id = product.Id }, product); 
         }
 
-        // PUT: api/Product/{id}
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")] 
         public IActionResult Update(int id, [FromBody] Product product)
@@ -70,12 +66,12 @@ namespace Aplikacja_na_BDwAI.Controllers
                 existingProduct.Price = product.Price;
                 existingProduct.Quantity = product.Quantity;
                 _context.SaveChanges();
-                return NoContent(); // Aktualizacja udana
+                return NoContent(); 
             }
             return BadRequest(ModelState); 
         }
 
-        // DELETE: api/Product/{id}
+ 
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")] 
         public IActionResult Delete(int id)
@@ -88,7 +84,7 @@ namespace Aplikacja_na_BDwAI.Controllers
 
             _context.Products.Remove(product);
             _context.SaveChanges();
-            return NoContent(); // Usunięcie udane
+            return NoContent(); 
         }
     }
 }
