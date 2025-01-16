@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Threading.Tasks;
+using System.Security.Claims;
 
 namespace Aplikacja_na_BDwAI.Controllers
 {
@@ -26,7 +27,7 @@ namespace Aplikacja_na_BDwAI.Controllers
 
         // POST: /Auth/Login
         [HttpPost]
-        public IActionResult Login(LoginViewModel model, string returnUrl = null)
+        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
         {
             if (!ModelState.IsValid)
             {
@@ -36,6 +37,19 @@ namespace Aplikacja_na_BDwAI.Controllers
             var user = _context.Users.FirstOrDefault(u => u.Email == model.Email && u.Password == model.Password);
             if (user != null)
             {
+                // Tworzenie tożsamości użytkownika
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.Email),
+                    new Claim(ClaimTypes.Role, user.Role)
+                };
+
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var principal = new ClaimsPrincipal(identity);
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+                // Ustawienie sesji
                 HttpContext.Session.SetString("UserRole", user.Role);
                 HttpContext.Session.SetString("UserEmail", user.Email);
 

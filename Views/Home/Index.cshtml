@@ -4,6 +4,22 @@
     <meta name="viewport" content="width=device-width" />
     <title>Strona Główna</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        .btn-disabled {
+            pointer-events: none; /* Uniemożliwia klikanie */
+            opacity: 0.5; /* Przezroczystość */
+        }
+
+        .btn-yellow {
+            background-color: yellow;
+            color: black;
+        }
+
+        .btn-red {
+            background-color: red;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
@@ -11,17 +27,29 @@
         <p>Witaj w aplikacji zarządzania! Wybierz sekcję:</p>
         <div class="row">
             <div class="col-md-4">
-                <a href="/Order/Index" class="btn btn-primary btn-block">Zamówienia</a>
+                @if (User.Identity.IsAuthenticated) {
+                <a href="/Order/Index" class="btn btn-yellow btn-block">Zamówienia</a>
+                } else {
+                <a class="btn btn-yellow btn-block btn-disabled">Zamówienia (wymaga logowania)</a>
+                }
             </div>
             <div class="col-md-4">
-                <a href="/Product/Index" class="btn btn-success btn-block">Produkty</a>
+                @if (User.IsInRole("Admin")) {
+                <a href="/Warehouse/Index" class="btn btn-primary btn-block">Magazyn</a>
+                } else if (User.Identity.IsAuthenticated) {
+                <a class="btn btn-primary btn-block btn-disabled">Magazyn (wymaga uprawnień Admina)</a>
+                } else {
+                <a class="btn btn-primary btn-block btn-disabled">Magazyn (wymaga logowania)</a>
+                }
             </div>
             <div class="col-md-4">
-                <a href="/Warehouse/Index" class="btn btn-warning btn-block">Magazyn</a>
+                @if (User.Identity.IsAuthenticated) {
+                <a href="/Product/Index" class="btn btn-red btn-block">Produkty</a>
+                } else {
+                <a class="btn btn-red btn-block btn-disabled">Produkty (wymaga logowania)</a>
+                }
             </div>
         </div>
     </div>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,12 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Data",
+    "\\Controllers",
+    "\\Migrations",
+    "\\Models",
     "\\Views",
     "\\Views\\Home",
     "\\Views\\Order",
     "\\Views\\Product",
-    "\\Views\\Shared"
+    "\\Views\\Shared",
+    "\\Views\\Warehouse"
   ],
   "PreviewInSolutionExplorer": false
 }

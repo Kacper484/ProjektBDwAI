@@ -1,11 +1,26 @@
 ﻿@model Warehouse
 
-<h1>Usuń Magazyn</h1>
-
-<p>Czy na pewno chcesz usunąć magazyn <strong>@Model.Name</strong>?</p>
-
-<form asp-action="Delete" method="post">
-    <input asp-for="Id" type="hidden" />
-    <button type="submit">Usuń</button>
-    <a asp-action="Index">Anuluj</a>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Usuń Magazyn</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center text-danger">Usuń Magazyn</h1>
+        @if (User.IsInRole("Admin")) {
+        <p>Czy na pewno chcesz usunąć ten magazyn?</p>
+        <p><strong>Nazwa:</strong> @Model.Name</p>
+        <p><strong>Lokalizacja:</strong> @Model.Location</p>
+        <form method="post" action="/Warehouse/Delete/@Model.Id">
+            <button type="submit" class="btn btn-danger">Usuń</button>
+            <a href="/Warehouse/Index" class="btn btn-secondary">Anuluj</a>
+        </form>
+        } else {
+        <p class="text-center text-danger">Musisz być administratorem, aby usunąć magazyn.</p>
+        }
+    </div>
+</body>
+</html>

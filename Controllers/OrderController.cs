@@ -19,17 +19,14 @@ namespace Aplikacja_na_BDwAI.Controllers
 
         public IActionResult Index()
         {
-            // Załaduj zamówienia wraz z powiązanymi produktami
             var orders = _context.Orders
-                .Include(o => o.Product) // Załaduj dane produktu
+                .Include(o => o.Product)
                 .ToList();
-
-            return View(orders); // Dostępne dla zalogowanych użytkowników
+            return View(orders);
         }
 
         public IActionResult Create()
         {
-            // Lista produktów dla pola wyboru
             ViewBag.Products = new SelectList(_context.Products, "Id", "Name");
             return View();
         }
@@ -39,11 +36,15 @@ namespace Aplikacja_na_BDwAI.Controllers
         {
             if (ModelState.IsValid)
             {
-                order.OrderDate = DateTime.Now;
+                // Dodaj zamówienie do bazy
                 _context.Orders.Add(order);
                 _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+
+                // Przekierowanie do listy zamówień
+                return RedirectToAction("Index");
             }
+
+            // W razie błędu ponownie załaduj listę produktów
             ViewBag.Products = new SelectList(_context.Products, "Id", "Name");
             return View(order);
         }
@@ -52,9 +53,8 @@ namespace Aplikacja_na_BDwAI.Controllers
         public IActionResult Delete(int id)
         {
             var order = _context.Orders
-                .Include(o => o.Product) // Załaduj dane produktu
+                .Include(o => o.Product)
                 .FirstOrDefault(o => o.Id == id);
-
             if (order == null)
                 return NotFound();
 
@@ -71,7 +71,7 @@ namespace Aplikacja_na_BDwAI.Controllers
 
             _context.Orders.Remove(order);
             _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,15 +1,32 @@
 ﻿@model Order
 
-<h1>Złóż Zamówienie</h1>
-
-<form asp-action="Create" method="post">
-    <div>
-        <label>Produkt:</label>
-        <select asp-for="ProductId" asp-items="ViewBag.Products"></select>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dodaj Zamówienie</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center text-warning">Dodaj Zamówienie</h1>
+        <form method="post" action="/Order/Create">
+            <div class="form-group">
+                <label for="ProductId">Produkt</label>
+                <select id="ProductId" name="ProductId" class="form-control" required>
+                    <option value="" disabled selected>Wybierz produkt</option>
+                    @foreach (var product in (IEnumerable<SelectListItem>)ViewBag.Products)
+                    {
+                    <option value="@product.Value">@product.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Quantity">Ilość</label>
+                <input type="number" id="Quantity" name="Quantity" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-success mt-3">Zapisz</button>
+        </form>
     </div>
-    <div>
-        <label>Ilość:</label>
-        <input asp-for="Quantity" type="number" />
-    </div>
-    <button type="submit">Złóż Zamówienie</button>
-</form>
+</body>
+</html>

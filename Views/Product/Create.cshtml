@@ -1,22 +1,35 @@
-﻿@model Product
-
-<h1>Dodaj Produkt</h1>
-
-<form asp-action="Create" method="post">
-    <div>
-        <label>Nazwa:</label>
-        <input asp-for="Name" />
-        <span asp-validation-for="Name"></span>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dodaj Produkt</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center text-danger">Dodaj Produkt</h1>
+        @if (ViewBag.Message != null) {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>@ViewBag.Message</strong>
+            <a href="/Product/Index" class="btn btn-primary btn-sm ml-3">Powrót do listy produktów</a>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Zamknij"></button>
+        </div>
+        }
+        <form method="post" action="/Product/Create">
+            <div class="form-group">
+                <label for="Name">Nazwa</label>
+                <input type="text" id="Name" name="Name" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="Price">Cena</label>
+                <input type="number" id="Price" name="Price" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="Quantity">Ilość</label>
+                <input type="number" id="Quantity" name="Quantity" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-success mt-3">Zapisz</button>
+        </form>
     </div>
-    <div>
-        <label>Cena:</label>
-        <input asp-for="Price" type="number" step="0.01" />
-        <span asp-validation-for="Price"></span>
-    </div>
-    <div>
-        <label>Ilość:</label>
-        <input asp-for="Quantity" type="number" />
-        <span asp-validation-for="Quantity"></span>
-    </div>
-    <button type="submit">Zapisz</button>
-</form>
+</body>
+</html>

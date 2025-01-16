@@ -1,11 +1,27 @@
 ﻿@model Product
 
-<h1>Usuń Produkt</h1>
-
-<p>Czy na pewno chcesz usunąć produkt <strong>@Model.Name</strong>?</p>
-
-<form asp-action="Delete" method="post">
-    <input asp-for="Id" type="hidden" />
-    <button type="submit">Usuń</button>
-    <a asp-action="Index">Anuluj</a>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Usuń Produkt</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center text-danger">Usuń Produkt</h1>
+        @if (User.Identity.IsAuthenticated) {
+        <p>Czy na pewno chcesz usunąć ten produkt?</p>
+        <p><strong>Nazwa:</strong> @Model.Name</p>
+        <p><strong>Cena:</strong> @Model.Price.ToString("C")</p>
+        <p><strong>Ilość:</strong> @Model.Quantity</p>
+        <form method="post" action="/Product/Delete/@Model.Id">
+            <button type="submit" class="btn btn-danger">Usuń</button>
+            <a href="/Product/Index" class="btn btn-secondary">Anuluj</a>
+        </form>
+        } else {
+        <p class="text-center text-danger">Musisz się zalogować, aby usunąć produkt.</p>
+        }
+    </div>
+</body>
+</html>

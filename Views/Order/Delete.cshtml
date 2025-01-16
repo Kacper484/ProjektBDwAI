@@ -1,16 +1,26 @@
 ﻿@model Order
 
-<h1>Usuń Zamówienie</h1>
-
-<p>Czy na pewno chcesz usunąć to zamówienie?</p>
-<div>
-    <strong>Produkt:</strong> @Model.Product.Name<br />
-    <strong>Ilość:</strong> @Model.Quantity<br />
-    <strong>Data Zamówienia:</strong> @Model.OrderDate
-</div>
-
-<form asp-action="DeleteConfirmed" method="post">
-    <input type="hidden" asp-for="Id" />
-    <button type="submit" class="btn btn-danger">Usuń</button>
-    <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Usuń Zamówienie</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center text-danger">Usuń Zamówienie</h1>
+        @if (User.Identity.IsAuthenticated) {
+        <p>Czy na pewno chcesz usunąć to zamówienie?</p>
+        <p><strong>Produkt:</strong> @Model.Product.Name</p>
+        <p><strong>Ilość:</strong> @Model.Quantity</p>
+        <form method="post" action="/Order/Delete/@Model.Id">
+            <button type="submit" class="btn btn-danger">Usuń</button>
+            <a href="/Order/Index" class="btn btn-secondary">Anuluj</a>
+        </form>
+        } else {
+        <p class="text-center text-danger">Musisz się zalogować, aby usunąć zamówienie.</p>
+        }
+    </div>
+</body>
+</html>

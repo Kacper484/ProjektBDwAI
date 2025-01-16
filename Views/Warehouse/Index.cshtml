@@ -1,27 +1,46 @@
 ﻿@model IEnumerable<Warehouse>
 
-<h1>Lista Magazynów</h1>
-
-<table>
-    <thead>
-        <tr>
-            <th>Nazwa</th>
-            <th>Lokalizacja</th>
-            <th>Akcje</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var warehouse in Model)
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Lista Magazynów</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h1 class="text-center text-primary">Lista Magazynów</h1>
+            @if (User.IsInRole("Admin"))
         {
-            <tr>
-                <td>@warehouse.Name</td>
-                <td>@warehouse.Location</td>
-                <td>
-                    <a asp-action="Delete" asp-route-id="@warehouse.Id">Usuń</a>
-                </td>
-            </tr>
+            <a href="/Warehouse/Create" class="btn btn-success mb-3">Dodaj Magazyn</a>
+            <table class="table table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Nazwa</th>
+                        <th>Lokalizacja</th>
+                        <th>Akcje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var warehouse in Model)
+                    {
+                    <tr>
+                        <td>@warehouse.Id</td>
+                        <td>@warehouse.Name</td>
+                        <td>@warehouse.Location</td>
+                        <td>
+                            <a href="/Warehouse/Delete/@warehouse.Id" class="btn btn-danger btn-sm">Usuń</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
         }
-    </tbody>
-</table>
-
-<a asp-action="Create">Dodaj Magazyn</a>
+        else
+        {
+            <p class="text-center text-danger">Musisz być administratorem, aby zobaczyć listę magazynów.</p>
+        }
+        </div>
+    </body>
+</html>

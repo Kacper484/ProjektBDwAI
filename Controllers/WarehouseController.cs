@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProjektBDwAI.Controllers
 {
-    [Authorize(Roles = "Admin")] // Wszystkie metody wymagają roli Admin
+    [Authorize(Roles = "Admin")]
     public class WarehouseController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -17,12 +17,12 @@ namespace ProjektBDwAI.Controllers
 
         public IActionResult Index()
         {
-            return View(_context.Warehouse.ToList()); // Lista magazynów
+            return View(_context.Warehouse.ToList());
         }
 
         public IActionResult Create()
         {
-            return View(); // Formularz dodawania magazynu
+            return View();
         }
 
         [HttpPost]
@@ -32,8 +32,9 @@ namespace ProjektBDwAI.Controllers
             {
                 _context.Warehouse.Add(warehouse);
                 _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index"); // Przekierowanie na listę magazynów
             }
+
             return View(warehouse);
         }
 
@@ -43,7 +44,7 @@ namespace ProjektBDwAI.Controllers
             if (warehouse == null)
                 return NotFound();
 
-            return View(warehouse); // Potwierdzenie usunięcia
+            return View(warehouse);
         }
 
         [HttpPost, ActionName("Delete")]
@@ -55,7 +56,7 @@ namespace ProjektBDwAI.Controllers
 
             _context.Warehouse.Remove(warehouse);
             _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index");
         }
     }
 }
